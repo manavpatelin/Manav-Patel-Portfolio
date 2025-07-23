@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubuntu 25.04 Portfolio - Manav Patel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <header id="header">
+        <div class="header-left">
+            <svg class="ubuntu-logo" width="24" height="24" viewBox="0 0 24 24" fill="#E95420">
+                <circle cx="12" cy="4.5" r="2.5" fill="#E95420"/>
+                <circle cx="19.5" cy="15" r="2.5" fill="#E95420"/>
+                <circle cx="4.5" cy="15" r="2.5" fill="#E95420"/>
+                <path d="M12 7.5c-2.5 0-4.5 2-4.5 4.5s2 4.5 4.5 4.5 4.5-2 4.5-4.5-2-4.5-4.5-4.5z" fill="none" stroke="#E95420" stroke-width="2"/>
+            </svg>
+            <span class="os-version">AI/ML Engineer</span>
+        </div>
+        <div class="header-center">
+            <h1>Manav Patel - Portfolio</h1>
+        </div>
+        <div class="header-right">
+            <div class="system-indicators">
+                <span class="wifi-indicator">📶</span>
+                <span class="battery-indicator">🔋</span>
+            </div>
+            <div id="clock"></div>
+            <button class="user-menu" aria-label="User menu">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 7.5V9M15 11.5V13H7V11.5H15M10.5 15.5V22H13.5V15.5H10.5Z"/>
+                </svg>
+            </button>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Dock -->
+    <nav id="dock" class="dock">
+        <div class="dock-container">
+            <ul class="dock-items">
+                <li>
+                    <button class="dock-button" data-window="about" aria-label="About" tabindex="0">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 7.5V9M15 11.5V13H7V11.5H15M10.5 15.5V22H13.5V15.5H10.5Z"/>
+                        </svg>
+                        <span class="tooltip">About Me</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="dock-button" data-window="experience" aria-label="Experience" tabindex="0">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20,6C20.58,6 21.05,6.2 21.42,6.59C21.8,7 22,7.45 22,8V19C22,19.55 21.8,20 21.42,20.41C21.05,20.8 20.58,21 20,21H4C3.42,21 2.95,20.8 2.58,20.41C2.2,20 2,19.55 2,19V8C2,7.45 2.2,7 2.58,6.59C2.95,6.2 3.42,6 4,6H8V4C8,3.42 8.2,2.95 8.59,2.58C9,2.2 9.45,2 10,2H14C14.55,2 15,2.2 15.41,2.58C15.8,2.95 16,3.42 16,4V6H20M4,8V19H20V8H4M10,4V6H14V4H10Z"/>
+                        </svg>
+                        <span class="tooltip">Experience</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="dock-button" data-window="projects" aria-label="Projects" tabindex="0">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+                        </svg>
+                        <span class="tooltip">Projects</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="dock-button" data-window="skills" aria-label="Skills" tabindex="0">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12,2A2,2 0 0,1 14,4C14,4.74 13.6,5.39 13,5.73V7H14A7,7 0 0,1 21,14H22A1,1 0 0,1 23,15V18A1,1 0 0,1 22,19H21V20A2,2 0 0,1 19,22H5A2,2 0 0,1 3,20V19H2A1,1 0 0,1 1,18V15A1,1 0 0,1 2,14H3A7,7 0 0,1 10,7H11V5.73C10.4,5.39 10,4.74 10,4A2,2 0 0,1 12,2Z"/>
+                        </svg>
+                        <span class="tooltip">Skills</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="dock-button" data-window="education" aria-label="Education" tabindex="0">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12,3L1,9L12,15L21,10.09V17H23V9M5,13.18V17.18L12,21L19,17.18V13.18L12,17L5,13.18Z"/>
+                        </svg>
+                        <span class="tooltip">Education</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="dock-button" data-window="resume" aria-label="Resume" tabindex="0">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+                        </svg>
+                        <span class="tooltip">Resume</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="dock-button" data-window="contact" aria-label="Contact" tabindex="0">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"/>
+                        </svg>
+                        <span class="tooltip">Contact</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Desktop Wallpaper -->
+    <div class="desktop-background"></div>
+
+    <!-- Workspace -->
+    <main id="workspace" class="workspace">
+        <!-- About Window -->
+        <div class="window" id="about-window" data-window="about">
+            <div class="window-header">
+                <div class="window-controls">
+                    <button class="window-control close" aria-label="Close window"></button>
+                    <button class="window-control minimize" aria-label="Minimize window"></button>
+                    <button class="window-control maximize" aria-label="Maximize window"></button>
+                </div>
+                <div class="window-title">👤 About - Manav Patel</div>
+            </div>
+            <div class="window-content">
+                <div class="hero-section">
+                    <div class="profile-card">
+                        <div class="profile-avatar">
+                            <svg width="80" height="80" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 7.5V9M15 11.5V13H7V11.5H15M10.5 15.5V22H13.5V15.5H10.5Z"/>
+                            </svg>
+                        </div>
+                        <h1 class="profile-name">Manav Patel</h1>
+                        <p class="profile-title">AI/ML Engineer</p>
+                        <p class="profile-location">📍 Ahmedabad, Gujarat</p>
+                        <p class="profile-summary">Innovating with AI and Data Science | Specializing in Machine Learning & Analytics</p>
+                    </div>
+                </div>
+
+                <div class="stats-section">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-value">2</div>
+                            <div class="stat-label">Internships</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">5+</div>
+                            <div class="stat-label">Major Projects</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">8.66</div>
+                            <div class="stat-label">CGPA</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">2025</div>
+                            <div class="stat-label">Graduate</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-quick">
+                    <h3>Quick Contact</h3>
+                    <div class="contact-info">
+                        <p><strong>📞 Phone:</strong> +91 9054855520</p>
+                        <p><strong>📧 Email:</strong> manavrpatel1@gmail.com</p>
+                        <p><strong>🔗 LinkedIn:</strong> <a href="https://www.linkedin.com/in/manavrpatel1" target="_blank">linkedin.com/in/manavrpatel1</a></p>
+                        <p><strong>💻 GitHub:</strong> <a href="https://github.com/manavpatelin" target="_blank">github.com/manavpatelin</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Experience Window -->
+        <div class="window" id="experience-window" data-window="experience">
+            <div class="window-header">
+                <div class="window-controls">
+                    <button class="window-control close" aria-label="Close window"></button>
+                    <button class="window-control minimize" aria-label="Minimize window"></button>
+                    <button class="window-control maximize" aria-label="Maximize window"></button>
+                </div>
+                <div class="window-title">💼 Experience</div>
+            </div>
+            <div class="window-content">
+                <div class="experience-content">
+                    <h2>Professional Experience</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h3>ML Engineer Intern</h3>
+                                <p class="company">BISAG-N</p>
+                                <p class="duration">Jan 2025 – Apr 2025</p>
+                                <p class="location">📍 Gandhinagar, India</p>
+                                <div class="responsibilities">
+                                    <h4>Key Responsibilities:</h4>
+                                    <ul>
+                                        <li>Developed a real-time traffic management system using Python, OpenCV, and YOLO for vehicle detection</li>
+                                        <li>Processed live and recorded video streams to count vehicles across multiple lanes with high accuracy</li>
+                                        <li>Stored traffic data (vehicle count, timestamps) in SQL for downstream analysis</li>
+                                        <li>Enhanced detection performance by fine-tuning model parameters and optimizing video processing pipelines</li>
+                                    </ul>
+                                </div>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">OpenCV</span>
+                                    <span class="tech-tag">YOLO</span>
+                                    <span class="tech-tag">SQL</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h3>Data Science Intern</h3>
+                                <p class="company">Brainybeam Info-Tech PVT LTD</p>
+                                <p class="duration">Jun 2024 – Jul 2024</p>
+                                <p class="location">📍 Ahmedabad, India</p>
+                                <div class="responsibilities">
+                                    <h4>Key Responsibilities:</h4>
+                                    <ul>
+                                        <li>Worked with the Air Quality Index dataset for analysis and insights</li>
+                                        <li>Utilized libraries such as Pandas, NumPy, Matplotlib, and Scikit-learn for data processing, visualization, and machine learning</li>
+                                        <li>Conducted data preprocessing and created visualizations to enhance model accuracy</li>
+                                    </ul>
+                                </div>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">Pandas</span>
+                                    <span class="tech-tag">NumPy</span>
+                                    <span class="tech-tag">Matplotlib</span>
+                                    <span class="tech-tag">Scikit-learn</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker leadership"></div>
+                            <div class="timeline-content">
+                                <h3>College Projects Team Leader</h3>
+                                <p class="company">Gujarat Power Engineering And Research Institute</p>
+                                <p class="duration">Jun 2021 – Jul 2024</p>
+                                <p class="location">📍 Mehsana, India</p>
+                                <div class="responsibilities">
+                                    <p>Led a team in various design engineering projects during the engineering program, driving innovative solutions and collaborative development.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker hackathon"></div>
+                            <div class="timeline-content">
+                                <h3>Smart India Hackathon Team Member</h3>
+                                <p class="company">National Initiative</p>
+                                <p class="duration">Sep 2023</p>
+                                <p class="location">📍 India</p>
+                                <div class="responsibilities">
+                                    <p>Participated in SIH 2023, contributing ideas for innovative problem-solving and collaborative development of technical solutions.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects Window -->
+        <div class="window" id="projects-window" data-window="projects">
+            <div class="window-header">
+                <div class="window-controls">
+                    <button class="window-control close" aria-label="Close window"></button>
+                    <button class="window-control minimize" aria-label="Minimize window"></button>
+                    <button class="window-control maximize" aria-label="Maximize window"></button>
+                </div>
+                <div class="window-title">📁 Projects</div>
+            </div>
+            <div class="window-content">
+                <div class="projects-content">
+                    <h2>Major Projects</h2>
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <h3>Smart Traffic Management System</h3>
+                            <p class="project-description">Developed a real-time traffic management system using video processing and computer vision. Used Python, OpenCV, YOLOv12, and PostgreSQL to detect and count vehicles across multiple lanes.</p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Flask</span>
+                                <span class="tech-tag">YOLOv12</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">OpenCV</span>
+                            </div>
+                            <div class="project-status status--success">Completed</div>
+                            <div class="project-highlights">
+                                <h4>Key Features:</h4>
+                                <ul>
+                                    <li>Real-time vehicle detection and counting</li>
+                                    <li>Multi-lane traffic analysis</li>
+                                    <li>Automated data storage and analysis</li>
+                                    <li>Improved monitoring efficiency and scalability</li>
+                                </ul>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://its-iiaf.onrender.com" target="_blank" class="btn btn--demo">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2C13.09 2 14 2.91 14 4C14 5.09 13.09 6 12 6C10.91 6 10 5.09 10 4C10 2.91 10.91 2 12 2ZM21 9V7L15 7.5V9M15 11.5V13H7V11.5H15M10.5 15.5V22H13.5V15.5H10.5Z"/>
+                                    </svg>
+                                    Live Demo
+                                </a>
+                                <a href="https://github.com/manavpatelin/ITS" target="_blank" class="btn btn--github">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"/>
+                                    </svg>
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <h3>Weather Forecasting App</h3>
+                            <p class="project-description">Built a real-time weather app using Streamlit and OpenWeatherMap API for city-based forecasts. Used Python, REST APIs, JSON, and UI elements for better user experience.</p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Streamlit</span>
+                                <span class="tech-tag">OpenWeatherAPI</span>
+                                <span class="tech-tag">REST API</span>
+                            </div>
+                            <div class="project-status status--success">Completed</div>
+                            <div class="project-highlights">
+                                <h4>Key Features:</h4>
+                                <ul>
+                                    <li>Real-time weather data integration</li>
+                                    <li>City-based forecast system</li>
+                                    <li>Interactive browser-based dashboard</li>
+                                    <li>Enhanced user experience with visual elements</li>
+                                </ul>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://weather-forcasting-app-b3zpsulyujhzyte3spa83e.streamlit.app/" target="_blank" class="btn btn--demo">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2C13.09 2 14 2.91 14 4C14 5.09 13.09 6 12 6C10.91 6 10 5.09 10 4C10 2.91 10.91 2 12 2ZM21 9V7L15 7.5V9M15 11.5V13H7V11.5H15M10.5 15.5V22H13.5V15.5H10.5Z"/>
+                                    </svg>
+                                    Live Demo
+                                </a>
+                                <a href="https://github.com/manavpatelin/Weather-forcasting-app" target="_blank" class="btn btn--github">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"/>
+                                    </svg>
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <h3>British Airways Tableau Dashboard</h3>
+                            <p class="project-description">Designed an interactive Tableau dashboard to analyze British Airways reviews, offering insights across multiple metrics like entertainment, cabin service, food, and comfort.</p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Tableau</span>
+                                <span class="tech-tag">Data Visualization</span>
+                                <span class="tech-tag">Business Intelligence</span>
+                            </div>
+                            <div class="project-status status--success">Completed</div>
+                            <div class="project-highlights">
+                                <h4>Key Features:</h4>
+                                <ul>
+                                    <li>Multi-metric review analysis</li>
+                                    <li>Interactive filtering system</li>
+                                    <li>Granular user-driven analysis</li>
+                                    <li>Professional data visualization</li>
+                                </ul>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://public.tableau.com/app/profile/manav.patel8134/viz/shared/QZT8B4JQ3" target="_blank" class="btn btn--demo">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2C13.09 2 14 2.91 14 4C14 5.09 13.09 6 12 6C10.91 6 10 5.09 10 4C10 2.91 10.91 2 12 2ZM21 9V7L15 7.5V9M15 11.5V13H7V11.5H15M10.5 15.5V22H13.5V15.5H10.5Z"/>
+                                    </svg>
+                                    Live Demo
+                                </a>
+                                <a href="https://github.com/manavpatelin/British-Airways-Tableau-Project" target="_blank" class="btn btn--github">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"/>
+                                    </svg>
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <h3>Website Summarizer</h3>
+                            <p class="project-description">Designed a website summarizer that uses Ollama API to summarize the content of a website.</p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Selenium</span>
+                                <span class="tech-tag">Ollama</span>
+                            </div>
+                            <div class="project-status status--success">Completed</div>
+                            <div class="project-highlights">
+                                <h4>Key Features:</h4>
+                                <ul>
+                                    <li>Simple web interface for submitting URLs</li>
+                                    <li>Uses Selenium and BeautifulSoup to extract and clean page text</li>
+                                    <li>Sends content to an LLM (configured for Ollama) for summarization</li>
+                                    <li>Displays the summary on the page</li>
+                                </ul>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://public.tableau.com/app/profile/manav.patel8134/viz/shared/QZT8B4JQ3" target="_blank" class="btn btn--demo">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2C13.09 2 14 2.91 14 4C14 5.09 13.09 6 12 6C10.91 6 10 5.09 10 4C10 2.91 10.91 2 12 2ZM21 9V7L15 7.5V9M15 11.5V13H7V11.5H15M10.5 15.5V22H13.5V15.5H10.5Z"/>
+                                    </svg>
+                                    Live Demo
+                                </a>
+                                <a href="https://github.com/manavpatelin/British-Airways-Tableau-Project" target="_blank" class="btn btn--github">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"/>
+                                    </svg>
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <h3>Human-like Reply Generator</h3>
+                            <p class="project-description">Generates human-like replies to social media posts using OpenAI's GPT-4 model. It analyzes the tone and intent of the original post to create contextually appropriate responses.</p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Open AI API</span>
+                                <span class="tech-tag">MongoDB</span>
+                            </div>
+                            <div class="project-status status--success">Completed</div>
+                            <div class="project-highlights">
+                                <h4>Key Features:</h4>
+                                <ul>
+                                    <li>Generates replies based on post tone and intent analysis</li>
+                                    <li>Supports multiple social media platforms</li>
+                                    <li>API endpoint for integration with other applications</li>
+                                    <li>MongoDB storage for reply history</li>
+                                </ul>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://human-like-reply-generator.onrender.com" target="_blank" class="btn btn--demo">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2C13.09 2 14 2.91 14 4C14 5.09 13.09 6 12 6C10.91 6 10 5.09 10 4C10 2.91 10.91 2 12 2ZM21 9V7L15 7.5V9M15 11.5V13H7V11.5H15M10.5 15.5V22H13.5V15.5H10.5Z"/>
+                                    </svg>
+                                    Live Demo
+                                </a>
+                                <a href="https://github.com/manavpatelin/Human-like-reply-generator" target="_blank" class="btn btn--github">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"/>
+                                    </svg>
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Skills Window -->
+        <div class="window" id="skills-window" data-window="skills">
+            <div class="window-header">
+                <div class="window-controls">
+                    <button class="window-control close" aria-label="Close window"></button>
+                    <button class="window-control minimize" aria-label="Minimize window"></button>
+                    <button class="window-control maximize" aria-label="Maximize window"></button>
+                </div>
+                <div class="window-title">⚡ Technical Skills</div>
+            </div>
+            <div class="window-content">
+                <div class="skills-content">
+                    <h2>Technical Expertise</h2>
+                    
+                    <div class="skill-category">
+                        <h3>Programming Languages</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item intermediate">Python</div>
+                            <div class="skill-item intermediate">SQL</div>
+                            <div class="skill-item intermediate">Java</div>
+                            <div class="skill-item intermediate">JavaScript</div>
+                            <div class="skill-item intermediate">C</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Machine Learning & AI</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">Scikit-learn</div>
+                            <div class="skill-item">TensorFlow</div>
+                            <div class="skill-item">Keras</div>
+                            <div class="skill-item">PyTorch</div>
+                            <div class="skill-item">OpenCV</div>
+                            <div class="skill-item">Ultralytics</div>
+                            <div class="skill-item">LLM</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Web Development</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">Flask</div>
+                            <div class="skill-item">Django</div>
+                            <div class="skill-item">Streamlit</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Data Analysis & Visualization</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">Pandas</div>
+                            <div class="skill-item">NumPy</div>
+                            <div class="skill-item">Matplotlib</div>
+                            <div class="skill-item">PowerBI</div>
+                            <div class="skill-item">Tableau</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Tools & Technologies</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">Git</div>
+                            <div class="skill-item">Github</div>
+                            <div class="skill-item">MySQL</div>
+                            <div class="skill-item">PostgreSQL</div>
+                            <div class="skill-item">n8n</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Soft Skills</h3>
+                        <div class="soft-skills">
+                            <div class="soft-skill-item">Leadership</div>
+                            <div class="soft-skill-item">Technical Writing</div>
+                            <div class="soft-skill-item">Public Speaking</div>
+                            <div class="soft-skill-item">Time Management</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Education Window -->
+        <div class="window" id="education-window" data-window="education">
+            <div class="window-header">
+                <div class="window-controls">
+                    <button class="window-control close" aria-label="Close window"></button>
+                    <button class="window-control minimize" aria-label="Minimize window"></button>
+                    <button class="window-control maximize" aria-label="Maximize window"></button>
+                </div>
+                <div class="window-title">🎓 Education</div>
+            </div>
+            <div class="window-content">
+                <div class="education-content">
+                    <h2>Educational Background</h2>
+                    
+                    <div class="education-timeline">
+                        <div class="education-item current">
+                            <div class="education-marker"></div>
+                            <div class="education-details">
+                                <h3>B.E Computer Engineering</h3>
+                                <p class="institution">Gujarat Power Engineering And Research Institute - GTU</p>
+                                <p class="duration">2021 – 2025</p>
+                                <p class="location">📍 Mehsana, India</p>
+                                <div class="grade-info">
+                                    <span class="grade-label">CGPA:</span>
+                                    <span class="grade-value">8.66</span>
+                                </div>
+                                <div class="education-highlights">
+                                    <h4>Key Achievements:</h4>
+                                    <ul>
+                                        <li>Consistently maintained high academic performance</li>
+                                        <li>Led multiple engineering projects</li>
+                                        <li>Participated in Smart India Hackathon 2023</li>
+                                        <li>Specialized in Computer Vision and Machine Learning</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="education-item">
+                            <div class="education-marker"></div>
+                            <div class="education-details">
+                                <h3>Higher Secondary Certificate (HSC)</h3>
+                                <p class="institution">The National Highschool</p>
+                                <p class="duration">2019 – 2021</p>
+                                <p class="location">📍 Ahmedabad, India</p>
+                                <div class="grade-info">
+                                    <span class="grade-label">Percentage:</span>
+                                    <span class="grade-value">82%</span>
+                                </div>
+                                <div class="education-highlights">
+                                    <h4>Focus Areas:</h4>
+                                    <ul>
+                                        <li>Science and Mathematics</li>
+                                        <li>Computer Science fundamentals</li>
+                                        <li>Strong foundation for engineering studies</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="academic-interests">
+                        <h3>Areas of Interest</h3>
+                        <div class="interest-tags">
+                            <span class="interest-tag">Machine Learning</span>
+                            <span class="interest-tag">Computer Vision</span>
+                            <span class="interest-tag">Data Science</span>
+                            <span class="interest-tag">Traffic Management Systems</span>
+                            <span class="interest-tag">Deep Learning</span>
+                            <span class="interest-tag">AI Applications</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resume Window -->
+        <div class="window" id="resume-window" data-window="resume">
+            <div class="window-header">
+                <div class="window-controls">
+                    <button class="window-control close" aria-label="Close window"></button>
+                    <button class="window-control minimize" aria-label="Minimize window"></button>
+                    <button class="window-control maximize" aria-label="Maximize window"></button>
+                </div>
+                <div class="window-title">📄 Resume</div>
+            </div>
+            <div class="window-content">
+                <div class="resume-content">
+                    <h2>Resume & Professional Links</h2>
+                    
+                    <div class="download-section">
+                        <div class="file-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+                            </svg>
+                        </div>
+                        <div class="file-info">
+                            <h3>Manav_Patel_Resume.pdf</h3>
+                            <p>Complete professional resume with experience, projects, and technical skills</p>
+                        </div>
+                        <button class="btn btn--primary download-btn" onclick="window.open('assets/MANAV_PATEL_RESUME.pdf', '_blank')">Download PDF</button>
+                    </div>
+
+                    <div class="professional-links">
+                        <h3>Professional Profiles</h3>
+                        <div class="profile-links">
+                            <a href="https://www.linkedin.com/in/manavrpatel1" class="profile-link linkedin" target="_blank">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3H19M18.5,18.5V13.2A3.26,3.26 0 0,0 15.24,9.94C14.39,9.94 13.4,10.46 12.92,11.24V10.13H10.13V18.5H12.92V13.57C12.92,12.8 13.54,12.17 14.31,12.17A1.4,1.4 0 0,1 15.71,13.57V18.5H18.5M6.88,8.56A1.68,1.68 0 0,0 8.56,6.88C8.56,5.95 7.81,5.19 6.88,5.19A1.69,1.69 0 0,0 5.19,6.88C5.19,7.81 5.95,8.56 6.88,8.56M8.27,18.5V10.13H5.5V18.5H8.27Z"/>
+                                </svg>
+                                <div>
+                                    <strong>LinkedIn Profile</strong>
+                                    <p>Professional networking and career updates</p>
+                                </div>
+                            </a>
+                            
+                            <a href="https://github.com/manavpatelin" class="profile-link github" target="_blank">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"/>
+                                </svg>
+                                <div>
+                                    <strong>GitHub Portfolio</strong>
+                                    <p>Code repositories and project showcases</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-summary">
+                        <h3>Quick Contact</h3>
+                        <div class="contact-grid">
+                            <div class="contact-item">
+                                <strong>📧 Email:</strong>
+                                <span>manavrpatel1@gmail.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <strong>📞 Phone:</strong>
+                                <span>+91 9054855520</span>
+                            </div>
+                            <div class="contact-item">
+                                <strong>📍 Location:</strong>
+                                <span>Ahmedabad, Gujarat, India</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Window -->
+        <div class="window" id="contact-window" data-window="contact">
+            <div class="window-header">
+                <div class="window-controls">
+                    <button class="window-control close" aria-label="Close window"></button>
+                    <button class="window-control minimize" aria-label="Minimize window"></button>
+                    <button class="window-control maximize" aria-label="Maximize window"></button>
+                </div>
+                <div class="window-title">📧 Contact</div>
+            </div>
+            <div class="window-content">
+                <div class="contact-content">
+                    <h2>Get in Touch</h2>
+                    <p>Feel free to reach out for collaboration opportunities, project discussions, or just to connect!</p>
+
+                    <div class="direct-contact">
+                        <h3>Direct Contact Information</h3>
+                        <div class="contact-details">
+                            <div class="contact-method">
+                                <div class="contact-icon">📧</div>
+                                <div class="contact-text">
+                                    <strong>Email</strong>
+                                    <a href="mailto:manavrpatel1@gmail.com">manavrpatel1@gmail.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="contact-icon">📞</div>
+                                <div class="contact-text">
+                                    <strong>Phone</strong>
+                                    <a href="tel:+919054855520">+91 9054855520</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="contact-icon">📍</div>
+                                <div class="contact-text">
+                                    <strong>Location</strong>
+                                    <span>Ahmedabad, Gujarat, India</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <h3>Connect with me</h3>
+                        <div class="social-buttons">
+                            <a href="https://www.linkedin.com/in/manavrpatel1" class="social-btn" target="_blank">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3H19M18.5,18.5V13.2A3.26,3.26 0 0,0 15.24,9.94C14.39,9.94 13.4,10.46 12.92,11.24V10.13H10.13V18.5H12.92V13.57C12.92,12.8 13.54,12.17 14.31,12.17A1.4,1.4 0 0,1 15.71,13.57V18.5H18.5M6.88,8.56A1.68,1.68 0 0,0 8.56,6.88C8.56,5.95 7.81,5.19 6.88,5.19A1.69,1.69 0 0,0 5.19,6.88C5.19,7.81 5.95,8.56 6.88,8.56M8.27,18.5V10.13H5.5V18.5H8.27Z"/>
+                                </svg>
+                                LinkedIn
+                            </a>
+                            <a href="https://github.com/manavpatelin" class="social-btn" target="_blank">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"/>
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Notification System -->
+    <div id="notification-area" class="notification-area"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
